@@ -1,0 +1,414 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{marvosym}
+\usepackage{simplemargins}
+
+\usepackage{ifthen}
+\ifdefined\doen
+\usepackage[english]{babel}
+\else
+\usepackage[francais]{babel}
+\fi
+\newcommand\enfr[2]{\ifdefined\doen#1\else#2\fi\xspace}
+\usepackage{array}
+\newcolumntype{x}[1]{>{\raggedleft\hspace{0pt}}p{#1}}
+
+\setleftmargin{1cm}
+\setrightmargin{1cm}
+\settopmargin{1cm}
+\setbottommargin{1cm}
+\pagestyle{empty}
+\usepackage{paralist}
+\usepackage{url}
+\usepackage{xspace}
+\usepackage[svgnames]{xcolor}
+\usepackage{amsmath}
+\usepackage{xfrac}
+\usepackage{hyperref}
+\usepackage{bibtopic}
+\makeatletter
+\renewcommand\@biblabel[1]{\vspace{1em}\hspace{-0.5em}}
+\makeatother
+
+
+\newcommand\skillset[2]{
+  \noindent\begin{tabular}{x{0.15\textwidth}|p{0.83\textwidth}}
+     #1 & #2 \\
+  \end{tabular}
+  \vspace{0.2cm}
+}
+
+\newcommand\cpplang{\textbf{C\raisebox{0.1em}{++}}\xspace}
+\newcommand\php{\textbf{PHP}\xspace}
+\newcommand\js{\textbf{Javascript}\xspace}
+\newcommand\sql{\textbf{SQL}\xspace}
+\newcommand\mpi{\hyperlink{https://en.wikipedia.org/wiki/Message_Passing_Interface}{\textbf{MPI}}\xspace}
+\newcommand\clang{\textbf{C}\xspace}
+\newcommand\cmake{\textbf{CMake}\xspace}
+\newcommand\rlang{\textbf{R}\xspace}
+\newcommand\perl{\textbf{Perl}\xspace}
+\newcommand\python{\textbf{python}\xspace}
+\newcommand\bash{\textbf{Bash}\xspace}
+\newcommand\java{\textbf{Java}\xspace}
+\newcommand\ada{\textbf{Ada}\xspace}
+\newcommand\blang{\hyperlink{https://www.methode-b.com/en/b-method/}{\textbf{B method}}\xspace}
+\newcommand\html{\textbf{HTML}\xspace}
+\newcommand\lisp{\textbf{lisp}\xspace}
+
+\newcommand\heading[1]{\Large\textsf{\textbf{\textcolor{DodgerBlue}{#1}}}\normalsize}
+\newcommand\entry[2]{\large\textcolor{Black}{\textbf{#1} --- #2}\normalsize}
+\newcommand\sideentry[1]{\normalsize\textbf{#1}~~}
+\newcommand\timespan[2]{\normalsize\textsf{#1 -- #2}}
+
+\hypersetup {
+  colorlinks=true,
+  urlcolor=DodgerBlue,
+  linkcolor=DodgerBlue,
+  citecolor=DodgerBlue,
+}
+
+\begin{document}
+\color{DarkSlateGray}
+
+%\defaultleftmargin{0em}{1em}{1em}{1em}.
+
+\begin{minipage}[t]{0.63\textwidth}
+  \Huge\textcolor{Black}{\textbf{Clément Rezvoy}}\normalsize\\
+
+  PhD in Computer Science\\
+  Senior Software Developper\\
+  Junior Team Manager\\
+  Rookie Product Owner\\
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.27\textwidth}
+  \hyperlink{tel:+33-675-633-563}{\enfr{+33 675 633 563}{06 75 63 35 63}} \\
+  \hyperlink{mailto:clement.rezvoy@gmail.com}{clement.rezvoy@gmail.com} \\
+  \hyperlink{https://linkedin.com/in/crezvoy}{linkedin.com/in/crezvoy} \\
+  \hyperlink{https://github.com/crezvoy}{github.com/crezvoy}
+\end{minipage}
+
+\begin{minipage}[t]{0.63\textwidth}
+\heading{\enfr{Work Experience}{Expérience Professionnelle}}\\
+
+\entry{Cosmo Tech, Lyon\enfr{ FR}}{\enfr{Software Engineer, Team Lead, and Product Owner}{Développeur, \textit{Team Lead}, et \textit{Product Owner}}}\\
+\textit{\enfr{Cosmo Tech is a global software vendor of Enterprise Digital Twin
+    solutions for the industry to simulate and optimize operational efficiency.}
+  {Cosmo Tech est un éditeur de logiciels fournisssant des solutions de jumeaux numériques pour l'industrie afin de simuler et optimiser l’efficacité opérationnelle}}
+
+\vspace{0.5em}
+\timespan{\enfr{May}{Mai} 2014}{\enfr{Feb}{Fev}. 2017}
+\begin{compactitem}
+\item[\textbullet] \enfr{Entered Cosmo Tech (\textit{née} The CoSMo Company)
+  as a Software Engineer, Working on the complex system modeling
+  language and simulation runtime, both written mainly in \cpplang
+  with bindings in \java and \python}
+    {Débuts chez Cosmo Tech (alors The CoSMo Company) comme
+      Développeur, travaillant sur le langage de modélisation de
+      systèmes complexes et l’environnement d'exécution des
+      simulations, tous deux écrits principalement en \cpplang avec
+      des surcouches en \java et \python};
+\item[\textbullet] \enfr{introduced concurrency into the simulation
+  scheduler to allow multithreaded simulations}
+  {Introduction de la notion de concurrence dans le \textit{scheduler}
+    de la simulation, permettant la parallélisation de certaines
+    étapes de la simulation};
+\item[\textbullet] \enfr{wrote a build and artifact management system
+  for third party libraries and tools based on \cmake}
+  {Création d'un système de build et de gestion des artéfacts basé sur
+    \cmake pour la gestion de nos dépendances \textit{open source}};
+\item[\textbullet] \enfr{introduced the notion of project and
+  dependencies to better handle project life cycle and allow for
+  project composability}
+  {Formalisation la notion de projet et de dépendances pour permettre
+    de mieux gérer le cycle de vie des projets et permettre les liens
+    de composition entre projets}.
+\end{compactitem}
+
+\vspace{0.5em}
+\timespan{\enfr{Feb}{Fev}. 2017}{\enfr{Apr}{Avr}. 2019}
+\begin{compactitem}
+\item[\textbullet] \enfr{In addition, I became \textbf{Team Lead} for my team (5
+software engineers). The position grouped the responsibility of
+both \textbf{scrum master} and \textbf{manager}}
+  {\textit{Team Lead} pour mon équipe (5 Ingénieurs). Ce poste
+    regroupe les responsabilité de \textit{\textbf{scrum master}} et
+    de \textit{\textbf{manager}}};
+\item[\textbullet] \enfr{Organized the day to day life the team, daily
+  stand-ups, retrospectives. Making sure the workload was
+  appropriately assigned to the members of the team and that the team
+  reached its commitment by the end of the sprint}
+  {Organisation de la vie de l'équipe au jour le jour,
+    \textit{standups} et rétrospectives. Je m'assurais que le travail
+    était correctement distribué au sein de l'équipe et que l'équipe
+    tenait ses engagements de fin de \textit{sprint}};
+\item[\textbullet] \enfr{Worked with the product owner to organize and
+  facilitate reviews and backlog groomings}
+  {Organisation et facilitation des \textit{feature reviews} et des
+    \textit{backlog grooming} en coordination avec le \textit{product
+      owner}};
+\item[\textbullet] \enfr{management responsibilities, including,
+  weekly one-on one, bi-annual performance reviews, hiring interviews,
+  and synchronization with other teams}
+  {Responsabilités de \textit{management}, réunions individuelles de
+    suivi, revues des objectifs semestrielles, recrutement et
+    synchronisation avec les autres équipes}.
+\end{compactitem}
+
+\vspace{0.5em}
+\timespan{\enfr{Apr}{Avr}. 2019}{\enfr{Present}{Présent}}
+\begin{compactitem}
+\item[\textbullet] \enfr{Currently holding the role of Cosmo Tech's platform \textbf{product
+  owner}; platform encompasses the modeling language, the
+    simulation runtime and deployment tools}
+  {J'occupe actuellement le poste de \textit{Product Owner} de la plateforme de Cosmo Tech; la plate-forme regroupe le langage de modélisation, l’environnement de simulation et les outils de déploiement};
+\item[\textbullet] \enfr{I am in charge of the product backlog, working with
+  the chief product owner, architect and CTO to define the evolution
+  of the platform}
+  {En charge de la \textit{backlog} du
+  produit, Je travaille avec le CTO l'architecte et les autres
+  \textit{product owners} à la définition des évolutions de la
+  plate-forme};
+\item[\textbullet] \enfr{regular presentations of future and current
+  developments to company management, users and prospects, grooming
+  with dev teams}
+  {présentations régulières des développements en
+  cours et à venir pour les dirigeants et cadres de la société, les
+  utilisateurs et prospects; \textit{grooming} avec les équipes de
+  développement pour affiner et estimer les nouvelles fonctionnalités};
+\item[\textbullet] \enfr{Functionally validating features, overseeing QA and
+  documentation process prior to general availability of new versions}
+  {Validation fonctionelles des fonctionalité, supervision des
+    campagnes de test et de documentation avant la mise à disposition
+    des nouvelles versions}.\\
+\end{compactitem}
+
+\entry{Qosmos, Paris\enfr{ FR}{}}{\enfr{Software Engineer}{Développeur}}\\
+\textit{\enfr{Enea Qosmos leads the market for embedded IP traffic
+    classification and network intelligence technology used in
+    physical, SDN and NFV architectures}
+  {Enea Qosmos est le leader du marché pour la classification de
+    traffic IP embarqué et l'inteligence réseau utilisé dans les
+    réseaux physique SDN et NFV}.}
+
+\vspace{0.5em}
+\timespan{Oct. 2011}{\enfr{Apr}{Avr}. 2014}
+\begin{compactitem}
+\item[\textbullet] \enfr{worked on high performance, low level \clang
+  code for network optimizations and security}
+  {Développement de code haute performance en \clang pour
+    l'optimization réseau et la sécurité};
+\item[\textbullet] \enfr{reversed engineered and implemented detection
+  routines for network protocols and applications for traffic
+  classification}
+  {Retro-engineering de protocoles réseaux et développement de routines
+    de classification pour la classification de traffic};
+\item[\textbullet] \enfr{created and led an in depth training program for partners wanting to
+  integrate and use Qosmos' products}
+  {Création et présentation d'un programme de formation pour des
+    partenaires souhaitant s'intégrer avec les produits Qosmos}.
+\end{compactitem}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.29\textwidth}
+  \heading{\enfr{Skills}{Compétences}}\\
+
+  \sideentry{\enfr{Software development}{Développement logiciel}}
+  \enfr{I have +10 years of experience designing and writing
+    software. I'm independent and can handle and oversee all the
+    stages of software development, from initial design to delivery. I
+    am mostly accustomed with system-level languages (\clang,
+    \cpplang) but I have also written substantial projects with
+    scripting languages (\python, \rlang, \bash). I have worked in
+    many different environments: distributed systems, near real-time,
+    webapps; I am adaptable, I tend to be quick to pickup a new tech
+    stack.}
+    {J'ai plus de 10 ans d’expérience dans la conception et
+    la création de logiciels. Je suis indépendant et je peux
+    participer ou gérer toutes les phases du développement logiciel,
+    de la demande initiale à la livraison. J'ai plus l'habitude des
+    langages systèmes (\clang, \cpplang) mais J'ai également réalisé
+    des projets dans des langages de plus haut niveau (\python, \rlang,
+    \bash). J'ai travaillé dans des environnement très différents:
+    Systèmes distribués, quasi temps-réel, webapps; Je sais m'adapter
+    rapidement à un nouvel environnement technique.}\\
+
+    \sideentry{\enfr{Team management}{Gestion d'équipe}}
+    \enfr{I can manage a team of developpers
+  following and \textbf{agile methodology}; I focus on making sure
+  they see the big picture and not only their current ticket.}
+    {Je sais gérer une équipe dans un contexte \textbf{agile}. Je
+      fait en sorte que les développeurs aient conscience de la
+      vision d'ensemble et pas seulement de leur ticket en cours.}\\
+ 
+    \sideentry{\enfr{Product Management}{Gestion de produit}}
+    \enfr{I can build from a client
+  request or \textbf{from an idea to an actual feature}. I follow the
+  initial requirement though all the steps of the process from
+  inception to completion and delivery. I make sure alignment between
+  management, dev team and users is never lost by communicating
+  regularly on the state of the product.}
+    {Je sais aller d'une demande client ou \textbf{d'une idée à une
+        fonctionnalité livrée}. Je suis la demande initiale à travers
+      toutes les étapes du processus de la conception à la réalisation
+      et la livraison. Je m'assure de l'alignement entre le
+      management, les développeurs et les utilisateurs n'ai jamais
+      rompu en communicant régulièrement.}\\
+
+    \sideentry{Communication}
+    \enfr{My teaching experience ranged from
+  Algorithmics in an elite school to Programming 101 for non computer
+  science majors, I learned to \textbf{adapt the message the audience}
+  to make sure I am understood.  During my PhD I was the link between
+  the Computer Science lab and the genomics lab, I know the importance
+  of \textbf{reaching a common understanding} to lead a meaningful
+  discussion. Today as a product owner much of my role is making sure
+  information flows correctly and losslessly from users to developers
+  and back.}
+  {Mon expérience d'enseignement m'a appris à \textbf{adapter le
+      discours au public} pour être sûr d'être compris. Durant mon
+    doctorat, j'étais le lien en le département d'informatique et de
+    biologie, Je connais l'importance \textbf{d'arriver à une
+      compréhension commune} du problème pour pourvoir en discuter
+    efficacement. Aujourd'hui, en tant que \textit{product owner}, Une
+    grande partie de mon rôle est de m'assurer que l'information
+    circule correctement et sans perte des utilisateurs aux
+    développeurs, et inversement.}\\
+ 
+\end{minipage}
+
+\pagebreak
+\begin{minipage}[t]{0.63\textwidth}
+\heading{\enfr{Academics \& Research}{Formation \& Recherche}}\\
+
+\entry{École Normale Supérieure, Lyon\enfr{ FR}{}}{\enfr{PhD, Computer Science}{Doctorat Informatique}}\\
+\textit{\enfr{Dissertation}{Thèse}:} \hyperlink{https://www.theses.fr/en/2011ENSL0643}{\textit{Large Scale Parallel Inference of Protein and Protein Domain families}}
+
+\vspace{0.5em}
+\timespan{Sept. 2007}{Sept. 2011}\\
+\enfr{I used \cpplang and \mpi to create a program to evenly
+distribute the workload of a large scale biological sequence analysis
+algorithm across thousands of cpus, while preserving the underlying
+biological hypotheses of a non trivially parallel problem. I was
+awarded $400,000$ hours of computing time on
+\hyperlink{https://www.cines.fr/en/supercomputing-2/}{CINES}
+supercomputer and spent countless week-ends and late nights using
+\hyperlink{https://www.grid5000.fr/w/Grid5000:Home}{grid'5000}, a
+distributed computing infrastructure.}
+{J'ai Utiliser de \cpplang et \mpi pour développer un programme
+  permettant de répartir efficacement la charge d'une analyse de
+  séquences biologiques à grande échelle sur un grand nombre de
+  processeurs, tout en préservant les hypothèses biologiques d'un
+  problème qui n'était pas trivialement parallèle. On m'a aloué $400
+  000$ heures de calcul sur le supercalculateur du
+  \hyperlink{https://www.cines.fr/en/supercomputing-2/}{CINES} et j'ai
+  également passé de nombreux week-ends et soirées à utiliser
+  \hyperlink{https://www.grid5000.fr/w/Grid5000:Home}{grid'5000}, une
+  infrastructure de calcul distribué. pour mener à bien ce projet.}
+
+\vspace{0.5em}
+\timespan{Sept 2007}{Sept. 2010}\\
+\enfr{During my PhD I also worked as a \textbf{teaching assistant} in computer
+science, I led recitations and practical sessions in: introduction to
+programming, Systems and Networks, Analysis and design of Algorithms.}
+{Pendant mon doctorat, j'ai également travaillé comme moniteur de en
+  informatique. J'ai dirigé des scéance de TD et TP en introduction à
+  la programmation, Système et réseaux et algorithmique.}\\
+
+\entry{Université de Lyon, Lyon\enfr{ FR}{}}{\enfr{MS, Bioinformatics}{Master Bioinformatique}}\\
+\textit{\enfr{Master degree in statistical and mathematical modeling of biological
+systems}{Master recherche en modélisation statistique et mathématiques des systèmes biologiques.}}
+
+\vspace{0.5em}
+\timespan{Sept 2005}{Jun. 2007}\\
+\enfr{Completed a Master degree in \textit{Approches Mathématiques et Informatique du
+  Vivant}, specializing in sequence analysis. During my first year I
+wrote the first version of MareyMap, a tool for estimating meiotic
+recombination rate written in \rlang. I published
+\hyperlink{https://academic.oup.com/bioinformatics/article/23/16/2188/199692}{a
+  paper} about it and I also had the opportunity to present my work in
+poster sessions of several french conferences. Sources have since then
+been put on \hyperlink{https://github.com/aursiber/MareyMap}{
+  github}.}
+{J'ai obtenu un Master \textit{Approches Mathématiques et Informatique du
+    Vivant}, spécialisé en ananlyse de séquence. Pendant ma première
+  année de master, J'ai écris la première version de MareyMap, un
+  outils d'estimation du taux de recombinaison meiotique écrit en
+  \rlang. J'ai publié \hyperlink{https://academic.oup.com/bioinformatics/article/23/16/2188/199692}{un
+  article} à ce propos et j'ai également eu l'occasion de présenter
+  mon travail dans plusieurs conférences. Les sources de cet outils on
+  depuis été déposées
+  \hyperlink{https://github.com/aursiber/MareyMap}{sur github}.}\\
+
+\entry{Teesside University, Middlesbrough UK}{\enfr{BS, Computer Studies}{BSc Computer Studies}}\\
+\textit{\enfr{General degree in computer science with a broad range of subjects covered.}
+  {Diplôme généraliste en informatique, niveau License, avec un large éventail de sujets abordés}}
+
+\vspace{0.5em}
+\timespan{Sept. 2003}{\enfr{June}{Juin} 2005}\\
+\enfr{
+Modules studied included: object technology (\java), database systems (\sql), networks
+\& communications, UI (\html, \js), operating systems (\clang), real time development,
+language systems, expert systems, AI (\lisp), safety and high integrity (\ada)
+systems, and formal Methods (\blang). I Graduated with a \textbf{First Class
+  with Honours}.}{
+ Les modules suivis incluaient: programmation objet (\java), base de
+ données (\sql), réseaux \& communications, UI (\html, \js), Systèmes
+ d'exploitation (\clang), Systèmes temps réel, Langages, Systèmes
+ experts, IA (\lisp), Système de haute intégrité (\ada) et méthodes
+ formelles (\blang). J'ai validé ce diplôme avec la mention
+ \textit{\textbf{First Class with Honours}}.}\\
+
+
+\entry{Université de Lyon, Lyon\enfr{ FR}{}}{\enfr{AS, Computer Science}{DUT Informatique}}\\
+\textit{\enfr{University degree, equivalent of an associate degree in computer science with an
+emphasis on software engineering.}{Dut Informatique, option Génie Informatique}}
+
+\vspace{0.5em}
+\timespan{Sept 2001}{\enfr{June}{Juin} 2003}\\
+\enfr{
+Completed a \textit{Diplôme Universitaire de Technologie Informatique
+  option génie informatique}. Modules studied included: maths
+(algebra, linear algebra, probability \& statistics), algorithms, UML,
+programming (\clang), OO-programming (\cpplang, \java), computer
+architecture, operating systems, networks, databases (\sql), web dev
+(\php, \js). I validated My degree with a 3 month internship at
+University of Stafforshire in Stoke On Trent (UK).}
+  {Les modules suivis incluaient: Mathématiques (algèbre, algèbre
+    linéaire, Probabilités et statistique), algorithmique, UML,
+    programmation (\clang), Programmation orientée objet (\cpplang,
+    \java), architecture des ordinateurs, Systèmes d'exploitation,
+    réseaux, bases de données (\sql), développement web (\php,
+    \js). J'ai validé mon diplôme avec un stage de trois mois à
+    l'université de Staffordshire à Stoke-on-Trent (UK).}
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.27\textwidth}
+  \heading{\enfr{Presentations}{Présentations}}\\
+
+  \sideentry{JOBIM 2007} \enfr{French bioinformatics conference. Scientific poster titled:}{Poster} \textit{MareyMap : a R-based tool with graphical interface for estimating recombination rates}. \\
+
+  \sideentry{JOBIM 2010} \enfr{Presentation titled:}{Présentation} \textit{Scalability of large-scale protein domain inference}.\\
+
+  \sideentry{ECCB 2010} \enfr{European conference on Computational Biology.}{Conférence européene sur la biologie computationnelle.} \enfr{Presentation titled:}{Présentation} \textit{Scalability of large-scale protein domain family inference}. \\
+
+  \sideentry{\enfr{PhD defense}{Soutenance de doctorat}} September 2011. \\
+
+  \sideentry{2013, Qosmos training} \enfr{3-day in-depth workshop.}{Programme de formation approfondie de 3 jour} \\
+
+  \sideentry{Cosmo Tech Product Roadmap} \enfr{Bi-annual internal
+  presentation of the state of the product and its future
+  evolutions.}
+  {Présentation semestrielle de l'actualité du produit et de ses
+    évolutions à venir.}\\
+
+  \begin{btSect}[plain]{mine}
+    \heading{\enfr{Papers}{Articles}}
+    %\vspace{-1em}
+    \btPrintAll
+  \end{btSect}
+\end{minipage}
+
+\end{document}
