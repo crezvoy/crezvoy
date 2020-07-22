@@ -4,6 +4,7 @@ I'm a software developper from Lyon France. Not much of what I have
 done can be found online. I mainly use github for my configuration
 files and the (far too) occasional open source contribution.
 
+Currently, I work on complex systems at [Cosmo Tech](https://www.cosmotech.com).
 In a previous life, I wrote the first version of
 [MareyMap 📈](https://github.com/aursiber/MareyMap). I also completed a
 PhD in computer Science titled [Large Scale Parallel Inference of
