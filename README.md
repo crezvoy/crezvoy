@@ -1,6 +1,6 @@
 ### Hi there 👋, I'm Clément
 
-I'm a software developper from Lyon France. Not much of what I have
+I'm a software developper from Lyon, France. Not much of what I have
 done can be found online. I mainly use github for my configuration
 files and the (far too) occasional open source contribution.
 
