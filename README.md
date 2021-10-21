@@ -4,8 +4,8 @@ I'm a software developper from Lyon, France. Not much of what I have
 done can be found online. I mainly use github for my configuration
 files and the (far too) occasional open source contribution.
 
-Currently, I work at NetApp. previusly I worked at [Cosmo Tech](https://www.cosmotech.com),
-and wrote the first version of [MareyMap 📈](https://github.com/aursiber/MareyMap). I also completed a
+Currently, I work at NetApp. previously I worked at [Cosmo Tech](https://www.cosmotech.com),
+ wrote the first version of [MareyMap 📈](https://github.com/aursiber/MareyMap), and completed a
 PhD in computer Science titled [Large Scale Parallel Inference of
 Protein and Protein Domain
 families 🧬](https://tel.archives-ouvertes.fr/tel-00682495/document). For
